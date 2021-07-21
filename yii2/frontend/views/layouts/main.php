@@ -9,6 +9,8 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use app\components\CategoryWidget;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -60,12 +62,24 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container">
+
+    <div class="container">  <!-- 100% -->
+        <div id="mySidenav" class="sidenav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <span style="font-size:30px; cursor:pointer"   onclick="closeNav()">×</span>
+        </div>
+        <div id="main">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
+        </div>
     </div>
 </div>
 
