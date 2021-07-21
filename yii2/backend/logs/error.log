@@ -1,0 +1,2 @@
+[Wed Jul 21 10:48:39.858750 2021] [php7:warn] [pid 18746] [client 127.0.0.1:57890] PHP Warning:  require(/var/www/itnotes/public_html/admin/../../yii/vendor/autoload.php): failed to open stream: No such file or directory in /var/www/itnotes/public_html/admin/index.php on line 5
+[Wed Jul 21 10:48:39.858793 2021] [php7:error] [pid 18746] [client 127.0.0.1:57890] PHP Fatal error:  require(): Failed opening required '/var/www/itnotes/public_html/admin/../../yii/vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/itnotes/public_html/admin/index.php on line 5

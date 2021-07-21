@@ -1,0 +1,17 @@
+
+#    Options +FollowSymlinks
+    RewriteEngine On
+
+
+
+#    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+#    RewriteCond %{REQUEST_URI} ^/.*
+#    RewriteRule ^(.*)$ web/$1 [L]
+
+#    RewriteCond %{REQUEST_URI} !^/web/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php
+
