@@ -6,6 +6,7 @@ foreach ($article as $artic) {
     echo $artic->title.'<br>';
 }
 ?>
+
 <h1>Категрии</h1>
 <?php
 foreach ($cat as $c) {

@@ -18,6 +18,7 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,49 +30,30 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
+    <div class="icon-bar">
+        <ul>
+            <li>
+                logo
+            </li>
+            <li>
+                home
+            </li>
+            <li>
+                admin
+            </li>
+        </ul>
+        <input type="text" placeholder="Search..">
+    </div>
 
 
     <div class="container">  <!-- 100% -->
-        <div id="mySidenav" class="sidenav">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <span style="font-size:30px; cursor:pointer"   onclick="closeNav()">×</span>
+        <div id="menu">
+            <button class="c-hamburger c-hamburger-line">
+                <span>menu</span>
+            </button>
+            <ul class="ul-menu">
+                        <?= CategoryWidget::widget([]) ?>
+            </ul>
         </div>
         <div id="main">
         <?= Breadcrumbs::widget([

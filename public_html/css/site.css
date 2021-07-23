@@ -95,74 +95,217 @@ a.desc:after {
     margin: 0 0 15px 0;
 }
 
-/* align the logout "link" (button in form) of the navbar */
-.nav li > form > button.logout {
-    padding: 15px;
+/*left menu*/
+
+.c-hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    box-shadow: none;
+    cursor: pointer;
     border: none;
+
 }
 
-@media(max-width:767px) {
-    .nav li > form > button.logout {
-        display:block;
-        text-align: left;
-        width: 100%;
-        padding: 10px 15px;
-    }
-}
-
-.nav > li > form > button.logout:focus,
-.nav > li > form > button.logout:hover {
-    text-decoration: none;
-}
-
-.nav > li > form > button.logout:focus {
+.c-hamburger:focus {
     outline: none;
 }
-.sidenav {
-    height: 100%;
-    width: 40px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 40px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+.c-hamburger span {
     display: block;
-    transition: 0.3s;
+    position: absolute;
+    top: 22px;
+    left: 10px;
+    right: 10px;
+    height: 5px;
+    background: #ffffff;
 }
 
-.sidenav span {
-    padding: 2px;
+.c-hamburger span::before, .c-hamburger span::after{
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+    content: "";
+}
+
+.c-hamburger span::before{
+    top: -10px;
+}
+
+.c-hamburger span::after{
+    bottom: -10px;
+}
+.c-hamburger-line{
+    background: #cb0032 ;
+}
+
+.c-hamburger-line span{
+    transition: background 0s 0s;
+}
+
+.c-hamburger-line span::before, .c-hamburger span::after{
+    transition-duration: 0.3s,0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger-line span::before{
+    transition-property:  top, tranform;
+}
+
+.c-hamburger-line span::after{
+    transition-property: bottom, tramsform;
+}
+
+.c-hamburger-line.is-active{
+    background: green;
+}
+
+.c-hamburger-line.is-active span{
+    background: none;
+}
+
+.c-hamburger-line.is-active span::before{
+    top:0;
+    transform: rotate(-45deg);
+}
+
+.c-hamburger-line.is-active span::after{
+    bottom:0;
+    transform: rotate(45deg);
+}
+
+.c-hamburger-line.is-active span::before, .c-hamburger-line.is-active span::after{
+    transition-delay: 0s, 0.3s;
+}
+
+#menu{
+    width: 300px;
+    margin-left: -251px;
+    background: #fbf0ff;
+    position: fixed;
+    left: 0;
+    top: 51px;
+    bottom: 0;
+    transition: all ease 1s;
+    z-index: 9999;
+}
+
+#main{
+    width: 80%;
+    /*min-width: 1000px;*/
+    margin: 30px auto;
+    /*text-align: center;*/
+}
+
+.body-active {
+    margin-left: 300px;
+}
+#menu.nav-active {
+    margin-left: 0;
+}
+
+body {
+    transition: all ease 1s;
+}
+
+/*left ul menu*/
+.ul-menu li{
+    list-style-type: none;
+}
+.ul-menu{
+    display: flex;
+    flex-direction: column;
+}
+.ul-menu li{
+    /*background: #856404;*/
+    /*position: relative;*/
+}
+.ul-menu a{
+    color: #292961;
+    text-decoration: none;
+    display: block;
+}
+
+.ul-menu a:hover{
+    background: #008000;
+    transition: 0.3s;
     color: white;
 }
-
-.sidenav a:hover {
-    color: #f1f1f1;
+.ul-menu ul{
+    /*position: absolute;*/
+    display: none;
+}
+.ul-menu li:hover > ul{
+    display: block;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+.ul-menu ul ul {
+    display: none;
+    transition: 0.5s;
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
+
+/*.ul-menu>ul>li:hover{*/
+/*    display: inline;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+    /* start top menu*/
+.icon-bar {
+    width: 100%;
+    background-color: #292961;
+    overflow: auto;
+    height: 51px;
+
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+.icon-bar li {
+    float: left;
+    width: 20%;
+    margin-top: 15px;
+    color: #ffffff;
+    list-style: none;
+
 }
+.icon-bar span {
+    float: right;
+    width: 20%;
+    margin-top: 15px;
+
+}
+
+.icon-bar input {
+    float: right;
+    width: 20%;
+    margin-top: 3px;
+    margin-right: 20px;
+
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+/* end top menu*/
