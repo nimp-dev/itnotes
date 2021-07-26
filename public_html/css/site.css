@@ -1,3 +1,4 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 html,
 body {
     height: 100%;
@@ -232,7 +233,7 @@ body {
 .ul-menu a{
     color: #292961;
     text-decoration: none;
-    display: block;
+    /*display: block;*/
 }
 
 .ul-menu a:hover{
@@ -240,23 +241,21 @@ body {
     transition: 0.3s;
     color: white;
 }
-.ul-menu ul{
-    /*position: absolute;*/
-    display: none;
-}
-.ul-menu li:hover > ul{
-    display: block;
-}
-
-.ul-menu ul ul {
-    display: none;
-    transition: 0.5s;
-}
-
-
-/*.ul-menu>ul>li:hover{*/
-/*    display: inline;*/
+/*.ul-menu ul{*/
+/*    !*position: absolute;*!*/
+/*    display: none;*/
 /*}*/
+/*.ul-menu li:hover > ul{*/
+/*    display: block;*/
+/*}*/
+
+/*.ul-menu ul ul {*/
+/*    display: none;*/
+/*    transition: 0.5s;*/
+/*}*/
+
+
+
 
 
 

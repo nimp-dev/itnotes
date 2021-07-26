@@ -1,3 +1,4 @@
+
 document.querySelector('.c-hamburger').addEventListener('click',function (e){
     e.preventDefault();
     //this.classList.toggle('is-active');
@@ -12,4 +13,13 @@ document.querySelector('.c-hamburger').addEventListener('click',function (e){
         document.body.classList.add('body-active');
     }
 
-})
+    $('.catalog').dcAccordion({
+        speed: 300
+    });
+
+
+});
+
+
+
+

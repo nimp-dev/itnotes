@@ -51,7 +51,7 @@ AppAsset::register($this);
             <button class="c-hamburger c-hamburger-line">
                 <span>menu</span>
             </button>
-            <ul class="ul-menu">
+            <ul class="ul-menu catalog">
                         <?= CategoryWidget::widget([]) ?>
             </ul>
         </div>
