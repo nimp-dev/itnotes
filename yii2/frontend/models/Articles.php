@@ -14,4 +14,8 @@ class Articles  extends ActiveRecord{
         return 'articles';
     }
 
+    public function getCategories(){
+        return $this->hasMany(Categories::className(), ['id' => 'category'])->viaTable('mm_at_ct', ['article' => 'id']);
+    }
+
 }

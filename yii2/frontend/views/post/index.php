@@ -1,15 +1,15 @@
 <?php
 ?>
-<h1>Посты</h1>
-<?php
-foreach ($article as $artic) {
-    echo $artic->title.'<br>';
-}
-?>
+<div class="row">
+<?php foreach ($article as $arct) :?>
 
-<h1>Категрии</h1>
-<?php
-foreach ($cat as $c) {
-    echo $c->title.'<br>';
-}
-?>
+<div class="col-sm-4">
+    <h1><?= $arct['title'] ?></h1>
+    <?php foreach ($arct['articles'] as $ar) :?>
+        <a style="text-decoration: none; cursor: pointer;"><?= $ar['title']?></a> <br>
+    <?php endforeach; ?>
+</div>
+
+<?php endforeach;?>
+</div>
+

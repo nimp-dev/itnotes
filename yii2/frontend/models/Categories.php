@@ -15,4 +15,8 @@ class Categories extends ActiveRecord{
         return 'categories';
     }
 
+    public function getArticles(){
+        return $this->hasMany(Articles::className(), ['id' => 'article'])->viaTable('mm_at_ct', ['category' => 'id']);
+    }
+
 }
