@@ -6,7 +6,8 @@ use yii\helpers\Url;
     <li class="ul-menu-list"><a href="<?= Url::to(['category/view', 'id' => $category['id']]) ?>">
             <?= $category['title'] ?>
             <?php if (isset($category['childs']) ): ?>
-            <span style="background: #008000; padding-left: 2px; padding-right: 2px; margin-left: 5px; color: #ffffff"><i class="fa fa-plus"></i></span>
+            <span style="background: #008000; padding-left: 2px; padding-right: 2px; margin-left: 5px; color: #ffffff"><i class="fa fa-sort-desc" aria-hidden="true"></i>
+</span>
             <?php endif; ?>
         </a>
         <?php if (isset($category['childs']) ): ?>

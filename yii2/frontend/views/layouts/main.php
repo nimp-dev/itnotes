@@ -33,10 +33,10 @@ AppAsset::register($this);
     <div class="icon-bar">
         <ul>
             <li>
-                logo
+                <a href="/" style="text-decoration: none; color: white;" >Home</a>
             </li>
             <li>
-                home
+                <a href="<?= Url::to(['category/index'])?>"  style="text-decoration: none; color: white;">Categories</a>
             </li>
             <li>
                 admin
@@ -51,7 +51,7 @@ AppAsset::register($this);
             <button class="c-hamburger c-hamburger-line">
                 <span>menu</span>
             </button>
-            <ul class="ul-menu catalog">
+            <ul class="ul-menu ">
                         <?= CategoryWidget::widget([]) ?>
             </ul>
         </div>

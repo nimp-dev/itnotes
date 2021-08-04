@@ -13,4 +13,9 @@ class PostController extends AppController{
         return $this->render('index',compact('article'));
     }
 
+    public function actionSinglePost($id){
+        $post = Articles::findOne($id);
+        return $this->render('single-post', compact('post'));
+    }
+
 }
