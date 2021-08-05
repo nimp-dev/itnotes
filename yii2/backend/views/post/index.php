@@ -21,8 +21,7 @@ use yii\grid\GridView;
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],
 
-                'id',
-                'created_at',
+                ['attribute'=>'cat', 'value'=>'catsString'],
                 'title',
                 'type',
 

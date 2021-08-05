@@ -28,9 +28,8 @@ use yii\widgets\DetailView;
             'model' => $model,
             'attributes' => [
                 'id',
-                'created_at',
-                'updated_at',
                 'title',
+                'catsString',
                 'lemma',
                 'content:html',
 //                'viewImage:image',

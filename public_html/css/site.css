@@ -201,7 +201,7 @@ a.desc:after {
 }
 
 #main{
-    width: 80%;
+    /*width: 80%;*/
     /*min-width: 1000px;*/
     margin: 30px auto;
     /*text-align: center;*/
@@ -308,3 +308,35 @@ body {
     background-color: #000;
 }
 /* end top menu*/
+
+/*список категорий*/
+.cat-bar{
+    margin: 5px;
+    border: 2px solid;
+    border-color: #292961;
+    padding: 0;
+    /*https://www.youtube.com/watch?v=Bluxbh9CaQ0*/
+}
+.post-bar{
+    width: 100%;
+    /*height: 300px;*/
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #ffffff;
+}
+
+.post-img {
+    width: 30%;
+    min-height: 100px;
+    background: #ccc;
+    float: left;
+    margin: 5px;
+}
+
+.post-text {
+    width: 70%;
+    min-height: 100px;
+    /*background: #c00;*/
+    float: right;
+    margin: 5px;
+}

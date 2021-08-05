@@ -39,7 +39,7 @@ AppAsset::register($this);
                 <a href="<?= Url::to(['category/index'])?>"  style="text-decoration: none; color: white;">Categories</a>
             </li>
             <li>
-                admin
+                <a href="http://admin.itnotes/"  style="text-decoration: none; color: white;">admin</a>
             </li>
         </ul>
         <input type="text" placeholder="Search..">

@@ -51,7 +51,7 @@ class PostController extends AppAdminController
         $dataProvider = new ActiveDataProvider([
             'query' => Articles::find(),
             'pagination' => [
-                'pageSize' => 5
+                'pageSize' => 10
             ],
             'sort' => [
                 'defaultOrder' => [

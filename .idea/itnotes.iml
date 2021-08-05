@@ -88,6 +88,19 @@
       <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/fakerphp/faker" />
       <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/2amigos/yii2-file-upload-widget" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/2amigos/yii2-gallery-widget" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/vova07/yii2-imperavi-widget" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/kartik-v/bootstrap-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/kartik-v/yii2-widget-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/kartik-v/yii2-krajee-base" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/bower-asset/blueimp-tmpl" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/bower-asset/blueimp-canvas-to-blob" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/bower-asset/blueimp-gallery" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/bower-asset/blueimp-file-upload" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/bower-asset/blueimp-load-image" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/kartik-v/yii2-widget-select2" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/select2/select2" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

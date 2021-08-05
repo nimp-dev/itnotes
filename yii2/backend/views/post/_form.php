@@ -28,32 +28,27 @@ use kartik\select2\Select2;
             <?= $form->field($model, 'title')->textInput() ?>
         </div>
         <div class="col-md-4">
-            
+            <?php
+            echo $form->field($model, 'categories_array')->widget(Select2::classname(), [
+                'data' => \yii\helpers\ArrayHelper::map(\backend\models\Categories::find()->all(),'id','title'),
+                'language' => 'ru',
+                'options' => ['placeholder' => 'категории...','multiple' => true],
+                'pluginOptions' => [
+                    'allowClear' => true,
+                    'tags'=>true,
+                ],
+            ]);?>
         </div>
         <div class="col-md-4"
-             <?php
-             echo $form->field($model, 'categories_array')->widget(Select2::classname(), [
-            'data' => \yii\helpers\ArrayHelper::map(\backend\models\Categories::find()->all(),'id','title'),
-            'language' => 'ru',
-            'options' => ['placeholder' => 'категории...','multiple' => true],
-            'pluginOptions' => [
-                'allowClear' => true,
-                'tags'=>true,
-            ],
-            ]);?>
 
-
+        <?= $form->field($model, 'type')->textInput() ?>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-6">
-            <?= $form->field($model, 'lemma')->textInput() ?>
+        <div class="col-md-12">
 
-        </div>
-        <div class="col-md-6">
-
-            <?= $form->field($model, 'type')->textInput() ?>
+            <?= $form->field($model, 'lemma')->textarea(['rows' => '2']) ?>
         </div>
     </div>
     <div class="row">
