@@ -52,7 +52,7 @@ class Articles extends ActiveRecord{
     {
         return [
             [['created_at', 'updated_at','content'], 'safe'],
-            [['title','lemma','img','type'], 'string', 'max' => 255],
+            [['title','lemma','img','type','content'], 'string', 'max' => 255],
             [['file'], 'image'],
             [['categories_array'], 'safe'],
         ];

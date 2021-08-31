@@ -81,13 +81,14 @@ class PostController extends AppAdminController
             $modelcat->article = $model->id;
             if($modelcat->load(Yii::$app->getRequest()->post()) && $modelcat->save())
 
-                return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
                 'modelcat' => $modelcat,
             ]);
         }
+        return $this->redirect(['view', 'id' => $model->id]);
     }
 
     public function actionUpdate($id)

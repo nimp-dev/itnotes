@@ -39,7 +39,7 @@ use kartik\select2\Select2;
                 ],
             ]);?>
         </div>
-        <div class="col-md-4"
+        <div class="col-md-4">
 
         <?= $form->field($model, 'type')->textInput() ?>
         </div>
@@ -78,10 +78,10 @@ use kartik\select2\Select2;
         ]); ?>
 
     </div>
+    </div>
         <div class="form-group">
             <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>
-    </div>
 </div>
