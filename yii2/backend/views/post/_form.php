@@ -20,7 +20,7 @@ use kartik\select2\Select2;
         <!--        <label class="control-label" for="category-parent_id">Родительская категория</label>-->
         <!--        <select id="category-parent_id" class="form-control" name="Category[parent_id]">-->
         <!--            <option value="0">Самостоятельная категория</option>-->
-        <!--            --><?//= app\components\CategoryWidget::widget(['tpl' => 'select', 'model' => $model])?>
+        <!--            -->
         <!--        </select>-->
         <!--    </div>-->
     <div class="row">
