@@ -3,20 +3,32 @@ namespace console\controllers;
 
 use Yii;
 use yii\console\Controller;
+use backend\models\Articles;
 
 class MailerController extends Controller
 {
     public function actionSend(){
 
-		$result = Yii::$app->mailer->compose()
+        $articles = Articles::find()
+            ->orderBy(['id'=> SORT_DESC])
+            ->limit(5)
+            ->all();
+
+        $title_art = '';
+        foreach ($articles as $artic){
+            $title_art .= $artic->title . '<br>';
+        }
+
+
+		 Yii::$app->mailer->compose()
                 ->setFrom('egorkonopka@ukr.net')
                 ->setTo('egorkonopka93@gmail.com')
                 ->setSubject('Тема сообщения')
                 ->setTextBody('Текст сообщения')
-                ->setHtmlBody('<b>текст сообщения в формате HTML</b>')
+                ->setHtmlBody($title_art)
                 ->send();
 
-        var_dump($result);
+        
         die;
     }
 
