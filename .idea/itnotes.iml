@@ -101,6 +101,8 @@
       <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/bower-asset/blueimp-load-image" />
       <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/kartik-v/yii2-widget-select2" />
       <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/select2/select2" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/kartik-v/yii2-grid" />
+      <excludeFolder url="file://$MODULE_DIR$/yii2/vendor/kartik-v/yii2-dialog" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

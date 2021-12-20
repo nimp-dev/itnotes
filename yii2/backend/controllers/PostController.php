@@ -2,6 +2,7 @@
 
 
 namespace backend\controllers;
+use backend\models\ArticlesSearch;
 use backend\models\MmAtCt;
 use yii\base\BaseObject;
 use yii\base\DynamicModel;
@@ -16,6 +17,7 @@ use yii\web\NotFoundHttpException;
 use Yii;
 use yii\helpers\Url;
 use yii\web\UploadedFile;
+use kartik\select2\Select2;
 
 
 class PostController extends AppAdminController
@@ -48,21 +50,13 @@ class PostController extends AppAdminController
 
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Articles::find(),
-            'pagination' => [
-                'pageSize' => 10
-            ],
-            'sort' => [
-                'defaultOrder' => [
-                    'id' => SORT_DESC
-                ]
-            ],
-        ]);
+        $searchModel = new ArticlesSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index',[
-            'dataProvider' => $dataProvider,
-        ]);
+        return $this->render('index',
+            ['searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
     }
 
     public function actionView($id)

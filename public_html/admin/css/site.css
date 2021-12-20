@@ -15,6 +15,10 @@ body.blank {
     padding: 0 0 60px;
 }
 
+body{
+    background-color: #F0FFF0;
+}
+
 body.blank .wrap {
     display: flex;
     align-items: center;
@@ -137,3 +141,16 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.box {
+    padding: 20px;
+}
+
+.box-body {
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: #f9f9f9 solid 3px;
+    border-radius: 5px;
+
+}
+

@@ -58,6 +58,17 @@ class Articles extends ActiveRecord{
         ];
     }
 
+    public static function getListTitle() {
+        $listTitle = self::find()->select("title")->distinct('title')->orderBy('title')->asArray()->all();
+        $listTitle = ArrayHelper::map($listTitle, 'title', 'title') ;
+        return $listTitle ;
+    }
+    public static function getListLemma() {
+        $listLemma = self::find()->select("lemma")->distinct('lemma')->orderBy('lemma')->asArray()->all();
+        $listLemma = ArrayHelper::map($listLemma, 'lemma', 'lemma') ;
+        return $listLemma ;
+    }
+
 
     public function getViewImage(){
         $dir = str_replace('admin.','',Url::home(true)).'uploads/images/blog/';

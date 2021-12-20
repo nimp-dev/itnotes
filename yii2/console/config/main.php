@@ -28,6 +28,13 @@ return [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                 ],
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'categories' => ['MyLogs'],
+                    'levels' => ['info','error'],
+                    'logFile' => '@console/runtime/logs/Mailer/send/send.log',
+                    'logVars' => []
+                ],
             ],
         ],
     ],

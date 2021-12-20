@@ -99,6 +99,10 @@
       <path value="$PROJECT_DIR$/yii2/vendor/bower-asset/blueimp-load-image" />
       <path value="$PROJECT_DIR$/yii2/vendor/kartik-v/yii2-widget-select2" />
       <path value="$PROJECT_DIR$/yii2/vendor/select2/select2" />
+      <path value="$PROJECT_DIR$/yii2/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/yii2/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/yii2/vendor/kartik-v/yii2-grid" />
+      <path value="$PROJECT_DIR$/yii2/vendor/kartik-v/yii2-dialog" />
     </include_path>
   </component>
 </project>

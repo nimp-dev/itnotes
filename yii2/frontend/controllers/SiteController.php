@@ -14,6 +14,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\TestModel;
 
 /**
  * Site controller
@@ -73,9 +74,13 @@ class SiteController extends Controller
      * @return mixed
      */
     public function actionIndex()
-    {
-        return $this->render('index');
+    {   
+        $model = new TestModel;
+
+        return $this->render('index',['model'=>$model]);
+
     }
+
 
     /**
      * Logs in a user.
