@@ -1,0 +1,4 @@
+yii2/backend/logs/access.log
+yii2/backend/logs/error.log
+yii2/frontend/logs/access.log
+yii2/frontend/logs/error.log

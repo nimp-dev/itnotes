@@ -262,4 +262,70 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
+
+
+    public  function actionApi(){
+
+
+        $token = '8P3laC-wFaqSOZM';
+        $url = 'http://im.egor.dev.smsclub.mobi/sms/send';
+
+        $data = json_encode([
+            'phone' => ['0961921771','0961921772','0961921770'],
+            'message' => 'test_message_API',
+            'src_addr' => 'Test_resend',
+            'lifetime' => '120',
+        ]);
+
+        $ch = curl_init();
+
+        curl_setopt_array($ch, [
+            CURLOPT_URL => $url,
+            CURLOPT_POSTFIELDS => $data,
+            CURLOPT_POST => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => [
+                'Authorization: Bearer ' . $token,
+                'Content-Type: application/json'
+            ]
+        ]);
+
+        $result = curl_exec($ch);
+
+
+        $data = json_decode($result,true);
+
+        curl_close($ch);
+        echo '<pre>';
+        print_r($data);
+        echo '</pre>';
+    }
+
+    public function actionStatus(){
+
+        $token = 'X8DcTOPfj-7KKjI';
+        $url = 'http://im.egor.dev.smsclub.mobi/sms/status';
+
+        $data = json_encode([
+            'id_sms' => ['945831143'],
+        ]);
+
+        $ch = curl_init();
+
+        curl_setopt_array($ch, [
+            CURLOPT_URL => $url,
+            CURLOPT_POSTFIELDS => $data,
+            CURLOPT_POST => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => [
+                'Authorization: Bearer ' . $token,
+                'Content-Type: application/json'
+            ]
+        ]);
+
+        $result = curl_exec($ch);
+        echo $result;
+
+        curl_close($ch);
+    }
 }
